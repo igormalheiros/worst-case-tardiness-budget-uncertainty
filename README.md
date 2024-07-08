@@ -40,4 +40,5 @@ budget uncertainty.
 # License
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen)](./LICENSE)
+
 This project is licensed under the [MIT License](./LICENSE).
