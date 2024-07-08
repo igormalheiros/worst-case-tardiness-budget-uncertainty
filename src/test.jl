@@ -17,8 +17,8 @@ function warmpup(input_file::String, budget_factor::Float64, dev_factor::Float64
     for exp = 1:3
         Random.seed!(exp)
         sequence = generate_rnd_squence(data.n)
-        benchmark_dp = solve_DP(data, sequence)
-        benchmark_milp = solve_MILP(data, sequence)
+        _ = solve_DP(data, sequence)
+        _ = solve_MILP(data, sequence)
     end
 end
 
@@ -39,7 +39,6 @@ function run(
         warmpup(input_file, budget_factor, dev_factor)
     end
 
-    cnt = 0
     for exp = 1:EXPERIMENTS
         Random.seed!(exp)
         sequence = generate_rnd_squence(data.n)
@@ -48,11 +47,10 @@ function run(
         benchmark_milp = solve_MILP(data, sequence)
 
         if !is_equal(benchmark_dp, benchmark_milp)
-            println("Different optimal costs!")
+            @error "Different optimal costs!"
             println("DP:\n", benchmark_dp)
             println("MILP:\n", benchmark_milp)
             @show sequence
-            cnt += 1
         else
             push!(benchmarks_MILP, benchmark_milp)
             push!(benchmarks_DP, benchmark_dp)
@@ -68,7 +66,7 @@ function run(
         dp_avg_runtime,
         milp_avg_runtime
     )
-    return cnt
+    return
 end
 
 if length(ARGS) != 4

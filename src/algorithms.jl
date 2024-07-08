@@ -1,5 +1,5 @@
 using JuMP, Test, CPLEX
-import MathOptInterface # Replaces MathProgBase
+import MathOptInterface
 
 function solve_DP(data::Data, sequence::Vector{Int})
     n = length(sequence)
