@@ -4,7 +4,7 @@ This repository contains the implementations to compute the worst-case total tar
 
 # Instances
 
-The instances to test them come from the traveling salesperson problem with time windows [Dumas et al. 1995](https://doi.org/10.1287/opre.43.2.367). We use the Euclidian distances among the jobs as the nominal processing time. Specifically, for a sequence `[1, 2, 3, 4]` the nominal processing times are: `[dist(1, 2), dist(2, 3), dist(3, 4), dist(4, 1)]`.
+The instances to test them come from the traveling salesperson problem with time windows [Dumas et al. 1995](https://doi.org/10.1287/opre.43.2.367). We use the Euclidian distances among the jobs as the nominal processing time. For, for a sequence `[1, 2, 3, 4]` the nominal processing times are: `[dist(1, 2), dist(2, 3), dist(3, 4), dist(4, 1)]`.
 
 # Running the algorithms
 
@@ -20,7 +20,7 @@ Every run builds a random sequence of jobs based on the instance and evaluates u
 julia test.jl instance_name budget_factor deviation_factor n_exp
 ```
 
-Where `instance_name` is the path to the instance file, `budget_factor` is the percentual budget of maximum deviated processing times, `deviation_factor` is the additional deviation to the nominal processing time, and `n_exp` is the total number of experiments using the configuration of same (`instance_name`, `budget_factor`, `deviation_factor`).
+Where `instance_name` is the path to the instance file, `budget_factor` represents the budget for the maximum deviated processing times as a percentage of the total number of jobs, `deviation_factor` represents the additional deviation applied to the nominal processing time as a percentage, and `n_exp` is the total number of experiments conducted using the same configuration (`instance_name`, `budget_factor`, `deviation_factor`).
 
 The output is in the form:
 
