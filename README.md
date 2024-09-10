@@ -4,7 +4,7 @@ Let a set of $n$ jobs scheduled in the order $[n]=\{1,2,\ldots,n\}$. For each jo
 
 $$\sum_{i \in [n]} \delta_i \leq \Gamma,$$
 
-for a given positive integer $\Gamma$. This repository contains implementations to compute the vector $\delta$ that maximizes the total tardiness. Two approaches are implemented. The first one is based on a polynomial-time algorithm proposed by [Malheiros et al. 2024](https://hal.science/hal-04351032/file/main.pdf). The second is based on a Mixed-Integer-Linear Programming (MILP) formulation and uses the CPLEX solver (another solver can be easily replaced with the JuMP interface). 
+for a given positive integer $\Gamma$. This repository contains implementations to compute the vector $\delta$ that maximizes the total tardiness. Two approaches are implemented. The first one is based on a polynomial-time algorithm proposed by [Malheiros et al. 2024](https://doi.org/10.1016/j.orl.2024.107148). The second is based on a Mixed-Integer-Linear Programming (MILP) formulation and uses the CPLEX solver (another solver can be easily replaced with the JuMP interface). 
 
 # Instances
 
