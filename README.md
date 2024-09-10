@@ -38,8 +38,7 @@ The `dp_runtime` and the `milp_runtime` are the geometric mean time in seconds t
 
 **The instances**: Y. Dumas, J. Desrosiers, É. Gélinas, M. M. Solomon, An optimal algorithm for the traveling salesman problem with time windows, Oper. Res. 43 (1995) 367–371. URL: https://doi.org/10.1287/opre.43.2.367. doi:10.1287/OPRE.43.2.367
 
-**The algorithms**: I. Malheiros, A. Pessoa, M. Poss, A. Subramanian, Computing the worst-case due dates violations with
-budget uncertainty.
+**The algorithms**: I. Malheiros, A. Pessoa, M. Poss, A. Subramanian, Computing the worst-case due dates violations with budget uncertainty, Operations Research Letters. 56 (2024) 107148. URL: https://doi.org/10.1016/j.orl.2024.107148
 
 # License
 
